@@ -1,5 +1,5 @@
 # CodingPractice
-Collection of Coding Practices/Challenges I’ve done in Edabit, CodeWars, and other related sites.
+This is a collection of the Coding Practices and Challenges I’ve done in Edabit, CodeWars, and other related sites.
 
-The codes here are not for revisions.
+The codes here are not to be revised.
 However, you are free to add comments.
