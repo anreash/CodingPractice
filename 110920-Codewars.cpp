@@ -220,3 +220,73 @@ otherwise it's false.
 */
 
 //-------------------------------------------------------------
+
+/* 8. 8 KYU - FAILED
+Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems.
+It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
+Ribonucleic acid, RNA, is the primary messenger molecule in cells.
+RNA differs slightly from DNA its chemical structure and contains no Thymine.
+In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+Create a function which translates a given DNA string into RNA.
+For example:
+
+"GCAT"  =>  "GCAU"
+The input string can be of arbitrary length - in particular, it may be empty.
+All input is guaranteed to be valid, 
+i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
+*/
+
+std::string DNAtoRNA (std::string dna){
+  std::replace (dna.begin(), dna.end(), 'T', 'U');
+  return dna;
+}
+
+/*
+I copied this better solution.
+This solution uses member.class std, replace.
+Reads the first letter to the end of dna - dna.begin(), dna.end().
+Replaces 'T', in every 'U' found.
+*/
+
+
+//-------------------------------------------------------------
+
+/* 9. 8 KYU - SUCCESS
+Given an array of integers your solution should find the smallest integer.
+For example:
+Given [34, 15, 88, 2] your solution will return 2
+Given [34, -345, -1, 100] your solution will return -345
+You can assume, for the purpose of this kata, that the supplied array will not be empty.
+*/
+
+#include <vector>
+
+using namespace std; 
+
+int findSmallest(vector <int> list)
+{
+  std::sort(list.begin(), list.end());
+  return list[0];
+}
+
+// Other solutions:
+
+#include <vector>
+#include <algorithm>
+
+int findSmallest(const std::vector<int>& list)
+{ 
+  return *std::min_element(list.begin(), list.end());
+}
+
+//-------------------------------------------------------------
+
+/* 10. 7 KYU - UNANSWERED
+This time no story, no theory. The examples below show you how to write function accum:
+Examples:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+The parameter of accum is a string which includes only letters from a..z and A..Z.
+*/
+
