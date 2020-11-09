@@ -139,7 +139,7 @@ If n is 4 in binary 0100, then n << 1 is 1000 which is 8.
 */
 //-------------------------------------------------------------
 
-/* 6. 8 KYU
+/* 6. 8 KYU - SUCCESS
 In this simple assignment you are given a number and have to make it negative.
 But maybe the number is already negative?
 Example:
@@ -170,7 +170,53 @@ just a dash and a number?
 2. There's no way to check that, since the test only calls for the -num result.
 */
 
+//Better Solutions:
+int makeNegative(int num)
+{
+  return -abs(num);
+}
+
+// Same as my solution -num. voted most clever
+
+int makeNegative(int num) {
+  return num > 0 ? -num : num;
+}
+
+//ternary operation is a best practice. voted best practice
+
 //-------------------------------------------------------------
 
+/* 7. 8 KYU - SUCCESS
+Complete the method that takes a boolean value and 
+return a "Yes" string for true, or a "No" string for false.
+*/
 
+using namespace std;
 
+string bool_to_word(bool value) {
+  return (value == true) ? "Yes" : "No";
+}
+
+/*
+Translation:
+If value is true, return "Yes", otherwise, return "No".
+
+Also called an 'arithmetic if' or an 'conditional expression'.
+*/
+
+// Better Solution
+
+using namespace std;
+
+string bool_to_word(bool value)
+{
+  return value ? "Yes" : "No";
+}
+
+/* 
+Same use but since it's a boolean,
+default value is true,
+otherwise it's false.
+*/
+
+//-------------------------------------------------------------
